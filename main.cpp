@@ -12,7 +12,7 @@ int main() {
     // --- Configuración del Puerto Serial ---
     Serial serial;
     // IMPORTANTE: Cambia "/dev/ttyUSB0" por tu puerto si es diferente (ej. /dev/ttyACM0)
-    const char* puerto = "/dev/ttyUSB0"; 
+    const char* puerto = "/dev/ttyACM0"; 
     
     std::cout << "Intentando conectar a Arduino en " << puerto << "..." << std::endl;
     if (!serial.abrir(puerto, 9600)) {
