@@ -7,7 +7,7 @@
 #include "Serial.h"
 #include <iostream>
 
-// --- Clase Base Abstracta ---
+// Clase Base Abstracta ---
 class SensorBase {
 protected:
     char nombre[50];
@@ -19,7 +19,7 @@ public:
     // 1. Destructor Virtual (Crítico para polimorfismo)
     virtual ~SensorBase();
 
-    // --- Métodos Virtuales Puros ---
+    //Métodos Virtuales Puros ---
     
     // 2. Procesa el historial de lecturas (lógica distinta)
     virtual void procesarLectura() = 0;
@@ -35,7 +35,7 @@ public:
 };
 
 
-// --- Clase Derivada: Temperatura (float) ---
+//Clase Derivada: Temperatura (float) ---
 class SensorTemperatura : public SensorBase {
 private:
     ListaSensor<float> historial;
@@ -51,7 +51,7 @@ public:
 };
 
 
-// --- Clase Derivada: Presión (int) ---
+//Clase Derivada: Presión (int) ---
 class SensorPresion : public SensorBase {
 private:
     ListaSensor<int> historial;

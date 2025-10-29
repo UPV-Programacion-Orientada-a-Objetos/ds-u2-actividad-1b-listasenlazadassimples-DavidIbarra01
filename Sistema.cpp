@@ -17,11 +17,11 @@ Sistema::~Sistema() {
         delete actual->dato; 
         
         // 2. El destructor de ListaSensor<SensorBase*> (que se llama solo)
-        // se encargará de liberar el 'Nodo' en sí.
+        // se encargará de liberar el Nodo en sí.
         
         actual = actual->siguiente;
     }
-    // El destructor de 'listaGestion' se llama al final, limpiando los Nodos
+    // El destructor de listaGestion se llama al final, limpiando los Nodos
     // (pero no los datos a los que apuntaban, por eso el 'delete' de arriba es vital)
 }
 

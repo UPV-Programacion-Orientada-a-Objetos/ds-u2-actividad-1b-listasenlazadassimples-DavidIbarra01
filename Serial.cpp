@@ -33,7 +33,7 @@ bool Serial::abrir(const char* puerto, int baudrate) {
         return false;
     }
 
-    // --- Configurar el puerto ---
+    //Configurar el puerto ---
     // Limpiar la estructura
     memset(&tty, 0, sizeof(tty));
 
