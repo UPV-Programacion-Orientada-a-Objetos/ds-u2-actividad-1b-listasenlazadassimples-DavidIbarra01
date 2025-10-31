@@ -1,4 +1,9 @@
-//(Implementación del Serial)
+/**
+ * @file Serial.cpp
+ * @brief Implementación de los métodos de la clase Serial.
+ * @details Contiene la lógica de bajo nivel POSIX para configurar
+ * y leer el puerto serial usando termios.h.
+ */
 
 #include "Serial.h"
 #include <iostream>
@@ -33,7 +38,7 @@ bool Serial::abrir(const char* puerto, int baudrate) {
         return false;
     }
 
-    //Configurar el puerto ---
+    // --- Configurar el puerto ---
     // Limpiar la estructura
     memset(&tty, 0, sizeof(tty));
 

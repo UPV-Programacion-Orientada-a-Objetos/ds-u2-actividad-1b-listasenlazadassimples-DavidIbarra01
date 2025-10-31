@@ -1,13 +1,16 @@
-//(Implementación de las Clases)
+/**
+ * @file Sensor.cpp
+ * @brief Implementación de los métodos de SensorBase, SensorTemperatura y SensorPresion.
+ */
 
 #include "Sensor.h"
 #include <cstring> // Para strcpy y strcmp
 #include <cstdlib> // Para atof (string a float) y atoi (string a int)
 #include <iostream>
 
-//Implementación SensorBase ---
+// --- Implementación SensorBase ---
 SensorBase::SensorBase(const char* n) {
-    //Copia segura del nombre (evita desbordamiento)
+    // Copia segura del nombre (evita desbordamiento)
     strncpy(nombre, n, 49);
     nombre[49] = '\0'; // Asegura terminación nula
 }
@@ -23,7 +26,7 @@ const char* SensorBase::getNombre() const {
 }
 
 
-//Implementación SensorTemperatura ---
+// --- Implementación SensorTemperatura ---
 SensorTemperatura::SensorTemperatura(const char* n) : SensorBase(n) {}
 
 SensorTemperatura::~SensorTemperatura() {
@@ -82,7 +85,7 @@ void SensorTemperatura::imprimirInfo() const {
 }
 
 
-//Implementación SensorPresion ---
+// --- Implementación SensorPresion ---
 SensorPresion::SensorPresion(const char* n) : SensorBase(n) {}
 
 SensorPresion::~SensorPresion() {
@@ -98,7 +101,7 @@ void SensorPresion::registrarNuevaLectura(Serial& port) {
         int bytes = port.leerLinea(buffer, 100);
         if (bytes > 0 && buffer[0] == 'P' && buffer[1] == ':') {
             // Encontramos una lectura de Presión
-            // atoi convierte el C-string (desde el 3er char) a int
+            // 'atoi' convierte el C-string (desde el 3er char) a int
             int valor = atoi(buffer + 2);
             historial.insertarAlFinal(valor);
             std::cout << "[Log] Insertando Nodo<int> " << valor << " en " << nombre << "." << std::endl;

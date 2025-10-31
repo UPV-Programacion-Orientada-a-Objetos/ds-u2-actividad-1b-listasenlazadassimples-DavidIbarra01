@@ -1,17 +1,24 @@
+/**
+ * @file main.cpp
+ * @brief Punto de entrada principal del programa y menú interactivo.
+ * @details Gestiona la inicialización del Sistema y el puerto Serial,
+ * y maneja el bucle principal del menú de usuario.
+ */
+
 #include <iostream>
 #include <limits> // Para limpiar el buffer de std::cin
 #include "Sistema.h"
 #include "Serial.h"
 
-//Prototipos de funciones del menú
+// --- Prototipos de funciones del menú ---
 void mostrarMenu();
 void crearSensor(Sistema& sistema, bool esTemp);
 void registrarLectura(Sistema& sistema, Serial& port);
 
 int main() {
-    //Configuración del Puerto Serial ---
+    // --- Configuración del Puerto Serial ---
     Serial serial;
-    // IMPORTANTE: Cambiar "/dev/ttyUSB0" por nuestro puerto si es que es diferente (ej. /dev/ttyACM0)
+    // IMPORTANTE: Cambia "/dev/ttyUSB0" por tu puerto si es diferente (ej. /dev/ttyACM0)
     const char* puerto = "/dev/ttyACM0"; 
     
     std::cout << "Intentando conectar a Arduino en " << puerto << "..." << std::endl;
@@ -24,7 +31,7 @@ int main() {
     // Damos tiempo al Arduino para que se estabilice
     sleep(2); 
 
-    //Inicio del Sistema ---
+    // --- Inicio del Sistema ---
     Sistema sistema;
     int opcion = 0;
     
@@ -73,7 +80,7 @@ int main() {
     return 0;
 }
 
-//Implementación de funciones del menú ---
+// --- Implementación de funciones del menú ---
 
 void mostrarMenu() {
     std::cout << "\n--- Menu Principal ---" << std::endl;
