@@ -1,0 +1,16 @@
+<map id="Sensor.h" name="Sensor.h">
+<area shape="rect" id="Node000001" title="Define la jerarquía de clases polimórficas para los Sensores." alt="" coords="113,5,190,31"/>
+<area shape="rect" id="Node000002" href="$ListaSensor_8h.html" title="Define la clase genérica ListaSensor y su struct anidado Nodo." alt="" coords="5,79,113,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="138,33,87,72,83,68,135,29"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="19,152,99,177"/>
+<area shape="poly" id="edge7_Node000001_Node000003" title=" " alt="" coords="152,32,144,66,127,105,109,127,89,145,86,141,105,124,122,103,139,64,147,31"/>
+<area shape="rect" id="Node000004" href="$Serial_8h.html" title="Define la clase Serial para comunicación en sistemas POSIX (Linux/macOS)." alt="" coords="203,79,273,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="167,29,215,68,212,72,164,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="62,104,62,138,57,138,57,104"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="124,152,187,177"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="226,106,181,145,178,141,223,102"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="211,152,295,177"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="243,104,250,138,245,139,238,105"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="319,152,394,177"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="258,102,327,142,324,147,256,106"/>
+</map>

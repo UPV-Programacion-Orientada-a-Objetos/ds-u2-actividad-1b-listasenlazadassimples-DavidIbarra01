@@ -1,0 +1,104 @@
+\doxysection{Serial Class Reference}
+\hypertarget{classSerial}{}\label{classSerial}\index{Serial@{Serial}}
+
+
+Abstrae la comunicación con el puerto serial (ej. Arduino).  
+
+
+
+
+{\ttfamily \#include $<$Serial.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSerial_a3667c3137f2df94716b5193f9fb736ab}{Serial}} ()
+\begin{DoxyCompactList}\small\item\em Constructor por defecto. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSerial_a5b32c394c0ff923a4ef1c13cfb20a6ba}{\texorpdfstring{$\sim$}{\string~}\+Serial}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structNodo}{bool}} \mbox{\hyperlink{classSerial_a6d302a92b743f500cfb7e98d3e1f8633}{abrir}} (\mbox{\hyperlink{structNodo}{const}} \mbox{\hyperlink{structNodo}{char}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structNodo}{puerto}}, \mbox{\hyperlink{structNodo}{int}} \mbox{\hyperlink{structNodo}{baudrate}})
+\begin{DoxyCompactList}\small\item\em Abre y configura el puerto serial. \end{DoxyCompactList}\item 
+\Hypertarget{classSerial_ae14e676b9c9248ab60a18c6676c6fc7d}\label{classSerial_ae14e676b9c9248ab60a18c6676c6fc7d} 
+\mbox{\hyperlink{structNodo}{void}} {\bfseries cerrar} ()
+\begin{DoxyCompactList}\small\item\em Cierra la conexión con el puerto serial. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structNodo}{int}} \mbox{\hyperlink{classSerial_a5411110df86cc007aac0330b41761018}{leer\+Linea}} (\mbox{\hyperlink{structNodo}{char}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structNodo}{buffer}}, \mbox{\hyperlink{structNodo}{int}} \mbox{\hyperlink{structNodo}{tam\+Buffer}})
+\begin{DoxyCompactList}\small\item\em Lee una línea completa (hasta \textquotesingle{}~\newline
+\textquotesingle{}) del puerto serial. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstrae la comunicación con el puerto serial (ej. Arduino). 
+
+Utiliza las APIs de bajo nivel de POSIX (\doxylink{structNodo_ae96eebd81fdcc626a95c8f4357a1c5b3}{termios.\+h}, \doxylink{structNodo_ae96eebd81fdcc626a95c8f4357a1c5b3}{fcntl.\+h}) para configurar y leer desde un puerto serial. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classSerial_a3667c3137f2df94716b5193f9fb736ab}\label{classSerial_a3667c3137f2df94716b5193f9fb736ab} 
+\index{Serial@{Serial}!Serial@{Serial}}
+\index{Serial@{Serial}!Serial@{Serial}}
+\doxysubsubsection{\texorpdfstring{Serial()}{Serial()}}
+{\footnotesize\ttfamily Serial\+::\+Serial (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor por defecto. 
+
+Inicializa el file descriptor a -\/1 (inválido). \Hypertarget{classSerial_a5b32c394c0ff923a4ef1c13cfb20a6ba}\label{classSerial_a5b32c394c0ff923a4ef1c13cfb20a6ba} 
+\index{Serial@{Serial}!````~Serial@{\texorpdfstring{$\sim$}{\string~}Serial}}
+\index{````~Serial@{\texorpdfstring{$\sim$}{\string~}Serial}!Serial@{Serial}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Serial()}{\string~Serial()}}
+{\footnotesize\ttfamily Serial\+::\texorpdfstring{$\sim$}{\string~}\+Serial (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+Cierra automáticamente el puerto si está abierto. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classSerial_a6d302a92b743f500cfb7e98d3e1f8633}\label{classSerial_a6d302a92b743f500cfb7e98d3e1f8633} 
+\index{Serial@{Serial}!abrir@{abrir}}
+\index{abrir@{abrir}!Serial@{Serial}}
+\doxysubsubsection{\texorpdfstring{abrir()}{abrir()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structNodo}{bool}} Serial\+::abrir (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structNodo}{const}} \mbox{\hyperlink{structNodo}{char}} \texorpdfstring{$\ast$}{*}}]{puerto,  }\item[{\mbox{\hyperlink{structNodo}{int}}}]{baudrate }\end{DoxyParamCaption})}
+
+
+
+Abre y configura el puerto serial. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em puerto} & La ruta del dispositivo (ej. "{}/dev/tty\+ACM0"{}). \\
+\hline
+{\em baudrate} & La velocidad de comunicación (ej. 9600). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true si la apertura y configuración fueron exitosas, false en caso contrario. 
+\end{DoxyReturn}
+\Hypertarget{classSerial_a5411110df86cc007aac0330b41761018}\label{classSerial_a5411110df86cc007aac0330b41761018} 
+\index{Serial@{Serial}!leerLinea@{leerLinea}}
+\index{leerLinea@{leerLinea}!Serial@{Serial}}
+\doxysubsubsection{\texorpdfstring{leerLinea()}{leerLinea()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structNodo}{int}} Serial\+::leer\+Linea (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structNodo}{char}} \texorpdfstring{$\ast$}{*}}]{buffer,  }\item[{\mbox{\hyperlink{structNodo}{int}}}]{tam\+Buffer }\end{DoxyParamCaption})}
+
+
+
+Lee una línea completa (hasta \textquotesingle{}~\newline
+\textquotesingle{}) del puerto serial. 
+
+Lee byte por byte hasta encontrar un salto de línea o llenar el buffer. Es una lectura bloqueante con timeout. 
+\begin{DoxyParams}{Parameters}
+{\em buffer} & Puntero al buffer de char donde se guardará la línea. \\
+\hline
+{\em tam\+Buffer} & El tamaño máximo del buffer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+El número de bytes leídos (excluyendo el \textquotesingle{}\textbackslash{}0\textquotesingle{}). 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Serial_8h}{Serial.\+h}}\item 
+\mbox{\hyperlink{Serial_8cpp}{Serial.\+cpp}}\end{DoxyCompactItemize}

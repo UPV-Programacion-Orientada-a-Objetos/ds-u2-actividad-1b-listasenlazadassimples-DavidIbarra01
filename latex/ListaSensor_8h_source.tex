@@ -1,0 +1,108 @@
+\doxysection{Lista\+Sensor.\+h}
+\hypertarget{ListaSensor_8h_source}{}\label{ListaSensor_8h_source}\mbox{\hyperlink{ListaSensor_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ LISTASENSOR\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ LISTASENSOR\_H}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <iostream>}\ \textcolor{comment}{//\ Solo\ para\ logs\ de\ liberación\ de\ memoria}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00016\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structNodo}{Nodo}}\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ T\ \mbox{\hyperlink{structNodo_ad2db7dbf78e797a2c4f4541619245d4f}{dato}};}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{structNodo}{Nodo<T>}}*\ \mbox{\hyperlink{structNodo_a6691e5766a27432fad708189c11f679d}{siguiente}};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{structNodo_ae96eebd81fdcc626a95c8f4357a1c5b3}{Nodo}}(T\ d)\ :\ \mbox{\hyperlink{structNodo_ad2db7dbf78e797a2c4f4541619245d4f}{dato}}(d),\ \mbox{\hyperlink{structNodo_a6691e5766a27432fad708189c11f679d}{siguiente}}(nullptr)\ \{\}}
+\DoxyCodeLine{00027\ \};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00037\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classListaSensor}{ListaSensor}}\ \{}
+\DoxyCodeLine{00038\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{structNodo}{Nodo<T>}}*\ cabeza;}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{int}\ tamano;}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ copiarDesde(\textcolor{keyword}{const}\ \mbox{\hyperlink{classListaSensor}{ListaSensor<T>}}\&\ otra)\ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ cabeza\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ tamano\ =\ 0;}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structNodo}{Nodo<T>}}*\ actualOtra\ =\ otra.cabeza;}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (actualOtra\ !=\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classListaSensor_a541f2559a48895a871cc9b32b662ee5c}{insertarAlFinal}}(actualOtra-\/>\mbox{\hyperlink{structNodo_ad2db7dbf78e797a2c4f4541619245d4f}{dato}});}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ actualOtra\ =\ actualOtra-\/>\mbox{\hyperlink{structNodo_a6691e5766a27432fad708189c11f679d}{siguiente}};}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00057\ \ \ \ \ \}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ limpiar()\ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structNodo}{Nodo<T>}}*\ actual\ =\ cabeza;}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (actual\ !=\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structNodo}{Nodo<T>}}*\ aBorrar\ =\ actual;}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ actual\ =\ actual-\/>\mbox{\hyperlink{structNodo_a6691e5766a27432fad708189c11f679d}{siguiente}};}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ aBorrar;}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ cabeza\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ tamano\ =\ 0;}
+\DoxyCodeLine{00072\ \ \ \ \ \}}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00079\ \ \ \ \ \mbox{\hyperlink{classListaSensor_add555365175bf2140b81b9a2b5a303f5}{ListaSensor}}()\ :\ cabeza(nullptr),\ tamano(0)\ \{\}}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00085\ \ \ \ \ \mbox{\hyperlink{classListaSensor_a1f0e57e514a2624a2473795bbd8fec8d}{\string~ListaSensor}}()\ \{}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ limpiar();}
+\DoxyCodeLine{00087\ \ \ \ \ \}}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00093\ \ \ \ \ \mbox{\hyperlink{classListaSensor_afca3f1611cff1e5a9a889c9c15e7e943}{ListaSensor}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classListaSensor}{ListaSensor<T>}}\&\ otra)\ \{}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ copiarDesde(otra);}
+\DoxyCodeLine{00095\ \ \ \ \ \}}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00103\ \ \ \ \ \mbox{\hyperlink{classListaSensor}{ListaSensor<T>}}\&\ \mbox{\hyperlink{classListaSensor_ae70d9be0dfbc1869f34828441a908d5d}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classListaSensor}{ListaSensor<T>}}\&\ otra)\ \{}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{this}\ !=\ \&otra)\ \{\ \textcolor{comment}{//\ Evitar\ auto-\/asignación}}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ limpiar();}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ copiarDesde(otra);}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00109\ \ \ \ \ \}}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/\ Métodos\ de\ la\ Lista\ -\/-\/-\/}}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classListaSensor_a541f2559a48895a871cc9b32b662ee5c}{insertarAlFinal}}(T\ dato)\ \{}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structNodo}{Nodo<T>}}*\ nuevo\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{structNodo}{Nodo<T>}}(dato);}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (cabeza\ ==\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ cabeza\ =\ \mbox{\hyperlink{structNodo}{nuevo}};}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structNodo}{Nodo<T>}}*\ \mbox{\hyperlink{structNodo}{actual}}\ =\ cabeza;}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{structNodo}{actual}}-\/>\mbox{\hyperlink{structNodo_a6691e5766a27432fad708189c11f679d}{siguiente}}\ !=\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structNodo}{actual}}\ =\ \mbox{\hyperlink{structNodo}{actual}}-\/>\mbox{\hyperlink{structNodo_a6691e5766a27432fad708189c11f679d}{siguiente}};}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structNodo}{actual}}-\/>\mbox{\hyperlink{structNodo_a6691e5766a27432fad708189c11f679d}{siguiente}}\ =\ \mbox{\hyperlink{structNodo}{nuevo}};}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ tamano++;}
+\DoxyCodeLine{00130\ \ \ \ \ \}}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classListaSensor_ad7d65bb473a4155ce8817ba4c27f2ef2}{eliminarValor}}(\mbox{\hyperlink{structNodo}{T}}\ \mbox{\hyperlink{structNodo}{valor}})\ \{}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structNodo}{Nodo<T>}}*\ \mbox{\hyperlink{structNodo}{actual}}\ =\ cabeza;}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structNodo}{Nodo<T>}}*\ \mbox{\hyperlink{structNodo}{anterior}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{structNodo}{actual}}\ !=\ \textcolor{keyword}{nullptr}\ \&\&\ \mbox{\hyperlink{structNodo}{actual}}-\/>\mbox{\hyperlink{structNodo_ad2db7dbf78e797a2c4f4541619245d4f}{dato}}\ !=\ \mbox{\hyperlink{structNodo}{valor}})\ \{}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structNodo}{anterior}}\ =\ \mbox{\hyperlink{structNodo}{actual}};}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structNodo}{actual}}\ =\ \mbox{\hyperlink{structNodo}{actual}}-\/>\mbox{\hyperlink{structNodo_a6691e5766a27432fad708189c11f679d}{siguiente}};}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{structNodo}{actual}}\ ==\ \textcolor{keyword}{nullptr})\ \textcolor{keywordflow}{return};\ \textcolor{comment}{//\ No\ encontrado}}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{structNodo}{anterior}}\ ==\ \textcolor{keyword}{nullptr})\ \{\ \textcolor{comment}{//\ Es\ la\ cabeza}}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ cabeza\ =\ \mbox{\hyperlink{structNodo}{actual}}-\/>\mbox{\hyperlink{structNodo_a6691e5766a27432fad708189c11f679d}{siguiente}};}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{\ \textcolor{comment}{//\ Es\ un\ nodo\ intermedio}}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structNodo}{anterior}}-\/>\mbox{\hyperlink{structNodo_a6691e5766a27432fad708189c11f679d}{siguiente}}\ =\ \mbox{\hyperlink{structNodo}{actual}}-\/>\mbox{\hyperlink{structNodo_a6691e5766a27432fad708189c11f679d}{siguiente}};}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ \mbox{\hyperlink{structNodo}{actual}};}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ tamano-\/-\/;}
+\DoxyCodeLine{00156\ \ \ \ \ \}}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00162\ \ \ \ \ \mbox{\hyperlink{structNodo}{Nodo<T>}}*\ \mbox{\hyperlink{classListaSensor_a4e2b415aecee4003af3546a1c67b2603}{getCabeza}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ cabeza;\ \}}
+\DoxyCodeLine{00163\ \ \ \ \ }
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classListaSensor_a4ccbebf964c8e3243c6c1c144f9ef181}{getTamano}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ tamano;\ \}}
+\DoxyCodeLine{00169\ \};}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00171\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

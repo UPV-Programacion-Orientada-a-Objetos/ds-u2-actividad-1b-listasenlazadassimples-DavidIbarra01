@@ -1,0 +1,40 @@
+\doxysection{main.\+cpp File Reference}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{main.cpp@{main.cpp}}
+
+
+Punto de entrada principal del programa y menú interactivo.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+{\ttfamily \#include "{}Sistema.\+h"{}}\newline
+{\ttfamily \#include "{}Serial.\+h"{}}\newline
+Include dependency graph for main.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{main_8cpp_ac0aca0f34a52fbe7527a03517bc3347e}\label{main_8cpp_ac0aca0f34a52fbe7527a03517bc3347e} 
+\mbox{\hyperlink{structNodo}{void}} {\bfseries mostrar\+Menu} ()
+\item 
+\Hypertarget{main_8cpp_ada3e8f98c608b7e5fe7bbf9b9c599f95}\label{main_8cpp_ada3e8f98c608b7e5fe7bbf9b9c599f95} 
+\mbox{\hyperlink{structNodo}{void}} {\bfseries crear\+Sensor} (\mbox{\hyperlink{classSistema}{Sistema}} \&\mbox{\hyperlink{structNodo}{sistema}}, \mbox{\hyperlink{structNodo}{bool}} \mbox{\hyperlink{structNodo}{es\+Temp}})
+\item 
+\Hypertarget{main_8cpp_abed7bbb6811c8424b387fdbb7b5f14b8}\label{main_8cpp_abed7bbb6811c8424b387fdbb7b5f14b8} 
+\mbox{\hyperlink{structNodo}{void}} {\bfseries registrar\+Lectura} (\mbox{\hyperlink{classSistema}{Sistema}} \&\mbox{\hyperlink{structNodo}{sistema}}, \mbox{\hyperlink{classSerial}{Serial}} \&\mbox{\hyperlink{structNodo}{port}})
+\item 
+\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+\mbox{\hyperlink{structNodo}{int}} {\bfseries main} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Punto de entrada principal del programa y menú interactivo. 
+
+Gestiona la inicialización del \doxylink{classSistema}{Sistema} y el puerto \doxylink{classSerial}{Serial}, y maneja el bucle principal del menú de usuario. 

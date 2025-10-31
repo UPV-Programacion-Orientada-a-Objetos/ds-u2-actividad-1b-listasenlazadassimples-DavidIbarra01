@@ -1,0 +1,23 @@
+<map id="Sensor.cpp" name="Sensor.cpp">
+<area shape="rect" id="Node000001" title="Implementación de los métodos de SensorBase, SensorTemperatura y SensorPresion." alt="" coords="122,5,214,31"/>
+<area shape="rect" id="Node000002" href="$Sensor_8h.html" title="Define la jerarquía de clases polimórficas para los Sensores." alt="" coords="81,79,159,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="162,33,137,69,133,66,158,30"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="23,225,103,251"/>
+<area shape="poly" id="edge11_Node000001_Node000004" title=" " alt="" coords="142,33,108,51,70,77,35,111,21,131,11,153,9,170,14,186,38,215,34,218,10,188,4,170,5,151,16,128,31,108,67,73,106,47,140,28"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="183,79,249,104"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="178,30,203,66,198,69,174,33"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="274,79,339,104"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="191,28,273,70,271,75,189,33"/>
+<area shape="rect" id="Node000003" href="$ListaSensor_8h.html" title="Define la clase genérica ListaSensor y su struct anidado Nodo." alt="" coords="21,152,129,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="115,106,92,142,87,139,110,103"/>
+<area shape="poly" id="edge8_Node000002_Node000004" title=" " alt="" coords="130,103,144,137,147,158,142,178,124,203,101,221,97,216,120,199,138,176,142,158,139,139,125,105"/>
+<area shape="rect" id="Node000005" href="$Serial_8h.html" title="Define la clase Serial para comunicación en sistemas POSIX (Linux/macOS)." alt="" coords="227,152,298,177"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="144,102,228,143,226,148,142,106"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="75,178,69,212,64,211,70,177"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="335,225,398,251"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="281,175,340,215,337,219,278,180"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="127,225,211,251"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="249,179,197,219,194,215,246,175"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="236,225,311,251"/>
+<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="267,177,272,211,267,212,262,178"/>
+</map>

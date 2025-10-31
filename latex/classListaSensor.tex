@@ -1,0 +1,170 @@
+\doxysection{Lista\+Sensor\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classListaSensor}{}\label{classListaSensor}\index{ListaSensor$<$ T $>$@{ListaSensor$<$ T $>$}}
+
+
+Implementa una Lista Enlazada Simple Genérica.  
+
+
+
+
+{\ttfamily \#include $<$Lista\+Sensor.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classListaSensor_add555365175bf2140b81b9a2b5a303f5}{Lista\+Sensor}} ()
+\begin{DoxyCompactList}\small\item\em Constructor por defecto. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classListaSensor_a1f0e57e514a2624a2473795bbd8fec8d}{\texorpdfstring{$\sim$}{\string~}\+Lista\+Sensor}} ()
+\begin{DoxyCompactList}\small\item\em Destructor (Regla de los Tres). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classListaSensor_afca3f1611cff1e5a9a889c9c15e7e943}{Lista\+Sensor}} (\mbox{\hyperlink{structNodo}{const}} \mbox{\hyperlink{classListaSensor}{Lista\+Sensor}}$<$ \mbox{\hyperlink{structNodo}{T}} $>$ \&\mbox{\hyperlink{structNodo}{otra}})
+\begin{DoxyCompactList}\small\item\em Constructor de Copia (Regla de los Tres). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classListaSensor}{Lista\+Sensor}}$<$ \mbox{\hyperlink{structNodo}{T}} $>$ \& \mbox{\hyperlink{classListaSensor_ae70d9be0dfbc1869f34828441a908d5d}{operator=}} (\mbox{\hyperlink{structNodo}{const}} \mbox{\hyperlink{classListaSensor}{Lista\+Sensor}}$<$ \mbox{\hyperlink{structNodo}{T}} $>$ \&\mbox{\hyperlink{structNodo}{otra}})
+\begin{DoxyCompactList}\small\item\em Operador de Asignación (Regla de los Tres). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structNodo}{void}} \mbox{\hyperlink{classListaSensor_a541f2559a48895a871cc9b32b662ee5c}{insertar\+Al\+Final}} (\mbox{\hyperlink{structNodo}{T}} dato)
+\begin{DoxyCompactList}\small\item\em Inserta un nuevo dato al final de la lista. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structNodo}{void}} \mbox{\hyperlink{classListaSensor_ad7d65bb473a4155ce8817ba4c27f2ef2}{eliminar\+Valor}} (\mbox{\hyperlink{structNodo}{T}} \mbox{\hyperlink{structNodo}{valor}})
+\begin{DoxyCompactList}\small\item\em Elimina la primera ocurrencia de un nodo por su valor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structNodo}{Nodo}}$<$ \mbox{\hyperlink{structNodo}{T}} $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classListaSensor_a4e2b415aecee4003af3546a1c67b2603}{get\+Cabeza}} () \mbox{\hyperlink{structNodo}{const}}
+\begin{DoxyCompactList}\small\item\em Obtiene el puntero a la cabeza de la lista. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structNodo}{int}} \mbox{\hyperlink{classListaSensor_a4ccbebf964c8e3243c6c1c144f9ef181}{get\+Tamano}} () \mbox{\hyperlink{structNodo}{const}}
+\begin{DoxyCompactList}\small\item\em Obtiene el tamaño actual de la lista. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$\mbox{\hyperlink{structNodo}{typename}} \mbox{\hyperlink{structNodo}{T}}$>$\newline
+class Lista\+Sensor$<$ T $>$}
+Implementa una Lista Enlazada Simple Genérica. 
+
+Esta clase gestiona la memoria (nodos) de forma manual y cumple con la Regla de los Tres para un manejo seguro de punteros y memoria dinámica. 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & El tipo de dato que almacenará la lista (ej. int, float, Sensor\+Base\texorpdfstring{$\ast$}{*}). \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classListaSensor_add555365175bf2140b81b9a2b5a303f5}\label{classListaSensor_add555365175bf2140b81b9a2b5a303f5} 
+\index{ListaSensor$<$ T $>$@{ListaSensor$<$ T $>$}!ListaSensor@{ListaSensor}}
+\index{ListaSensor@{ListaSensor}!ListaSensor$<$ T $>$@{ListaSensor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ListaSensor()}{ListaSensor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{structNodo}{typename}} \mbox{\hyperlink{structNodo}{T}} $>$ \\
+\mbox{\hyperlink{classListaSensor}{Lista\+Sensor}}$<$ \mbox{\hyperlink{structNodo}{T}} $>$\mbox{\hyperlink{classListaSensor}{\+::\+Lista\+Sensor}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor por defecto. 
+
+Inicializa una lista vacía. \Hypertarget{classListaSensor_a1f0e57e514a2624a2473795bbd8fec8d}\label{classListaSensor_a1f0e57e514a2624a2473795bbd8fec8d} 
+\index{ListaSensor$<$ T $>$@{ListaSensor$<$ T $>$}!````~ListaSensor@{\texorpdfstring{$\sim$}{\string~}ListaSensor}}
+\index{````~ListaSensor@{\texorpdfstring{$\sim$}{\string~}ListaSensor}!ListaSensor$<$ T $>$@{ListaSensor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ListaSensor()}{\string~ListaSensor()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{structNodo}{typename}} \mbox{\hyperlink{structNodo}{T}} $>$ \\
+\mbox{\hyperlink{classListaSensor}{Lista\+Sensor}}$<$ \mbox{\hyperlink{structNodo}{T}} $>$\+::\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{classListaSensor}{Lista\+Sensor}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destructor (Regla de los Tres). 
+
+Llama a limpiar() para liberar todos los nodos. \Hypertarget{classListaSensor_afca3f1611cff1e5a9a889c9c15e7e943}\label{classListaSensor_afca3f1611cff1e5a9a889c9c15e7e943} 
+\index{ListaSensor$<$ T $>$@{ListaSensor$<$ T $>$}!ListaSensor@{ListaSensor}}
+\index{ListaSensor@{ListaSensor}!ListaSensor$<$ T $>$@{ListaSensor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ListaSensor()}{ListaSensor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{structNodo}{typename}} \mbox{\hyperlink{structNodo}{T}} $>$ \\
+\mbox{\hyperlink{classListaSensor}{Lista\+Sensor}}$<$ \mbox{\hyperlink{structNodo}{T}} $>$\mbox{\hyperlink{classListaSensor}{\+::\+Lista\+Sensor}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structNodo}{const}} \mbox{\hyperlink{classListaSensor}{Lista\+Sensor}}$<$ \mbox{\hyperlink{structNodo}{T}} $>$ \&}]{otra }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor de Copia (Regla de los Tres). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em otra} & La lista a copiar. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classListaSensor_ad7d65bb473a4155ce8817ba4c27f2ef2}\label{classListaSensor_ad7d65bb473a4155ce8817ba4c27f2ef2} 
+\index{ListaSensor$<$ T $>$@{ListaSensor$<$ T $>$}!eliminarValor@{eliminarValor}}
+\index{eliminarValor@{eliminarValor}!ListaSensor$<$ T $>$@{ListaSensor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{eliminarValor()}{eliminarValor()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{structNodo}{typename}} \mbox{\hyperlink{structNodo}{T}} $>$ \\
+\mbox{\hyperlink{structNodo}{void}} \mbox{\hyperlink{classListaSensor}{Lista\+Sensor}}$<$ \mbox{\hyperlink{structNodo}{T}} $>$\+::eliminar\+Valor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structNodo}{T}}}]{valor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Elimina la primera ocurrencia de un nodo por su valor. 
+
+Busca un valor y, si lo encuentra, elimina el nodo y re-\/enlaza la lista. 
+\begin{DoxyParams}{Parameters}
+{\em valor} & El valor de tipo T a buscar y eliminar. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classListaSensor_a4e2b415aecee4003af3546a1c67b2603}\label{classListaSensor_a4e2b415aecee4003af3546a1c67b2603} 
+\index{ListaSensor$<$ T $>$@{ListaSensor$<$ T $>$}!getCabeza@{getCabeza}}
+\index{getCabeza@{getCabeza}!ListaSensor$<$ T $>$@{ListaSensor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getCabeza()}{getCabeza()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{structNodo}{typename}} \mbox{\hyperlink{structNodo}{T}} $>$ \\
+\mbox{\hyperlink{structNodo}{Nodo}}$<$ \mbox{\hyperlink{structNodo}{T}} $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classListaSensor}{Lista\+Sensor}}$<$ \mbox{\hyperlink{structNodo}{T}} $>$\+::get\+Cabeza (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene el puntero a la cabeza de la lista. 
+
+\begin{DoxyReturn}{Returns}
+Puntero constante al primer nodo (Nodo$<$\+T$>$\texorpdfstring{$\ast$}{*}). 
+\end{DoxyReturn}
+\Hypertarget{classListaSensor_a4ccbebf964c8e3243c6c1c144f9ef181}\label{classListaSensor_a4ccbebf964c8e3243c6c1c144f9ef181} 
+\index{ListaSensor$<$ T $>$@{ListaSensor$<$ T $>$}!getTamano@{getTamano}}
+\index{getTamano@{getTamano}!ListaSensor$<$ T $>$@{ListaSensor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getTamano()}{getTamano()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{structNodo}{typename}} \mbox{\hyperlink{structNodo}{T}} $>$ \\
+\mbox{\hyperlink{structNodo}{int}} \mbox{\hyperlink{classListaSensor}{Lista\+Sensor}}$<$ \mbox{\hyperlink{structNodo}{T}} $>$\+::get\+Tamano (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene el tamaño actual de la lista. 
+
+\begin{DoxyReturn}{Returns}
+El número de elementos (int). 
+\end{DoxyReturn}
+\Hypertarget{classListaSensor_a541f2559a48895a871cc9b32b662ee5c}\label{classListaSensor_a541f2559a48895a871cc9b32b662ee5c} 
+\index{ListaSensor$<$ T $>$@{ListaSensor$<$ T $>$}!insertarAlFinal@{insertarAlFinal}}
+\index{insertarAlFinal@{insertarAlFinal}!ListaSensor$<$ T $>$@{ListaSensor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{insertarAlFinal()}{insertarAlFinal()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{structNodo}{typename}} \mbox{\hyperlink{structNodo}{T}} $>$ \\
+\mbox{\hyperlink{structNodo}{void}} \mbox{\hyperlink{classListaSensor}{Lista\+Sensor}}$<$ \mbox{\hyperlink{structNodo}{T}} $>$\+::insertar\+Al\+Final (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structNodo}{T}}}]{dato }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Inserta un nuevo dato al final de la lista. 
+
+Crea un nuevo nodo y lo enlaza al final. 
+\begin{DoxyParams}{Parameters}
+{\em dato} & El valor de tipo T que se agregará. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classListaSensor_ae70d9be0dfbc1869f34828441a908d5d}\label{classListaSensor_ae70d9be0dfbc1869f34828441a908d5d} 
+\index{ListaSensor$<$ T $>$@{ListaSensor$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!ListaSensor$<$ T $>$@{ListaSensor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{structNodo}{typename}} \mbox{\hyperlink{structNodo}{T}} $>$ \\
+\mbox{\hyperlink{classListaSensor}{Lista\+Sensor}}$<$ \mbox{\hyperlink{structNodo}{T}} $>$ \& \mbox{\hyperlink{classListaSensor}{Lista\+Sensor}}$<$ \mbox{\hyperlink{structNodo}{T}} $>$\mbox{\hyperlink{structNodo}{\+::operator}}= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structNodo}{const}} \mbox{\hyperlink{classListaSensor}{Lista\+Sensor}}$<$ \mbox{\hyperlink{structNodo}{T}} $>$ \&}]{otra }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Operador de Asignación (Regla de los Tres). 
+
+Previene la auto-\/asignación, limpia la lista actual y copia desde la otra. 
+\begin{DoxyParams}{Parameters}
+{\em otra} & La lista a asignar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Referencia a {\ttfamily \texorpdfstring{$\ast$}{*}this}. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{ListaSensor_8h}{Lista\+Sensor.\+h}}\end{DoxyCompactItemize}

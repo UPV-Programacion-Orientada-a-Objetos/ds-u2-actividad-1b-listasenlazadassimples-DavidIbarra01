@@ -1,0 +1,68 @@
+\doxysection{Sensor.\+h}
+\hypertarget{Sensor_8h_source}{}\label{Sensor_8h_source}\mbox{\hyperlink{Sensor_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#ifndef\ SENSOR\_H}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ SENSOR\_H}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ListaSensor_8h}{ListaSensor.h}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Serial_8h}{Serial.h}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classSensorBase}{SensorBase}}\ \{}
+\DoxyCodeLine{00021\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classSensorBase_a843ba88809ed7b78942a0a4b1c484cf5}{nombre}}[50];}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{classSensorBase}{SensorBase}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{structNodo}{n}});}
+\DoxyCodeLine{00031\ \ \ \ \ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classSensorBase_af38b2b0e047cb4f0304fc4c204c420fa}{\string~SensorBase}}();}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/\ Métodos\ Virtuales\ Puros\ -\/-\/-\/}}
+\DoxyCodeLine{00042\ \ \ \ \ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSensorBase_a7fbc0a5b444f7d16cd60ba873b8ec8e4}{procesarLectura}}()\ =\ 0;}
+\DoxyCodeLine{00049\ \ \ \ \ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSensorBase_a7cf3aeb12b330c500e2a5136fa020eec}{imprimirInfo}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSensorBase_a38d4987aafc115157c1013a675e80854}{registrarNuevaLectura}}(\mbox{\hyperlink{classSerial}{Serial}}\&\ \mbox{\hyperlink{structNodo}{port}})\ =\ 0;}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{classSensorBase_ae96d193c623231a955756bceac482f9c}{getNombre}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00069\ \};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00077\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classSensorTemperatura}{SensorTemperatura}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classSensorBase}{SensorBase}}\ \{}
+\DoxyCodeLine{00078\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00080\ \ \ \ \ \mbox{\hyperlink{structNodo}{ListaSensor<float>}}\ historial;}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00087\ \ \ \ \ \mbox{\hyperlink{classSensorTemperatura}{SensorTemperatura}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{structNodo}{n}});}
+\DoxyCodeLine{00088\ \ \ \ \ }
+\DoxyCodeLine{00093\ \ \ \ \ \mbox{\hyperlink{classSensorTemperatura_aaeb0f7948069eb57dc05170414c47b12}{\string~SensorTemperatura}}();}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSensorTemperatura_a36227dc500c6f8be7866cb0f396894b3}{procesarLectura}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00100\ \ \ \ \ }
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSensorTemperatura_a95a263967c5f9a55da09be3b11c27c86}{imprimirInfo}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00105\ \ \ \ \ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSensorTemperatura_a4cb8905c3ebeb7ffec35fb8eea15fbd1}{registrarNuevaLectura}}(\mbox{\hyperlink{classSerial}{Serial}}\&\ \mbox{\hyperlink{structNodo}{port}})\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00112\ \};}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00120\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classSensorPresion}{SensorPresion}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classSensorBase}{SensorBase}}\ \{}
+\DoxyCodeLine{00121\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00123\ \ \ \ \ \mbox{\hyperlink{structNodo}{ListaSensor<int>}}\ historial;}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00130\ \ \ \ \ \mbox{\hyperlink{classSensorPresion}{SensorPresion}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{structNodo}{n}});}
+\DoxyCodeLine{00131\ \ \ \ \ }
+\DoxyCodeLine{00136\ \ \ \ \ \mbox{\hyperlink{classSensorPresion_aa82718b7990902c257ebcd0234e1ed46}{\string~SensorPresion}}();}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSensorPresion_aff696aceb5e619529f911311a35d3c76}{procesarLectura}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00143\ \ \ \ \ }
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSensorPresion_ad5181690dfb24946217e882606f04428}{imprimirInfo}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00148\ \ \ \ \ }
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSensorPresion_a2314c314508d9b7cda9c977020cdf392}{registrarNuevaLectura}}(\mbox{\hyperlink{classSerial}{Serial}}\&\ \mbox{\hyperlink{structNodo}{port}})\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00155\ \};}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00157\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

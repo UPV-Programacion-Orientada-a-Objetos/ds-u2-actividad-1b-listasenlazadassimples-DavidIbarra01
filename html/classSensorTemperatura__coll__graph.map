@@ -1,0 +1,5 @@
+<map id="SensorTemperatura" name="SensorTemperatura">
+<area shape="rect" id="Node000001" title="Clase derivada que maneja lecturas de temperatura (float)." alt="" coords="5,79,153,104"/>
+<area shape="rect" id="Node000002" href="$classSensorBase.html" title="Clase Base Abstracta para todos los sensores del sistema." alt="" coords="30,5,129,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="82,44,82,79,77,79,77,44"/>
+</map>

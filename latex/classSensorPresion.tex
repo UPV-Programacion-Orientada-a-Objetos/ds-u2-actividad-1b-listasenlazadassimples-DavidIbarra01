@@ -1,0 +1,148 @@
+\doxysection{Sensor\+Presion Class Reference}
+\hypertarget{classSensorPresion}{}\label{classSensorPresion}\index{SensorPresion@{SensorPresion}}
+
+
+Clase derivada que maneja lecturas de presión (int).  
+
+
+
+
+{\ttfamily \#include $<$Sensor.\+h$>$}
+
+
+
+Inheritance diagram for Sensor\+Presion\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{classSensorPresion__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Sensor\+Presion\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{classSensorPresion__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSensorPresion_aaeabc03aa7fa915d9c2718a7930e434e}{Sensor\+Presion}} (\mbox{\hyperlink{structNodo}{const}} \mbox{\hyperlink{structNodo}{char}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structNodo}{n}})
+\begin{DoxyCompactList}\small\item\em Constructor de \doxylink{classSensorPresion}{Sensor\+Presion}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSensorPresion_aa82718b7990902c257ebcd0234e1ed46}{\texorpdfstring{$\sim$}{\string~}\+Sensor\+Presion}} ()
+\begin{DoxyCompactList}\small\item\em Destructor de \doxylink{classSensorPresion}{Sensor\+Presion}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structNodo}{void}} \mbox{\hyperlink{classSensorPresion_aff696aceb5e619529f911311a35d3c76}{procesar\+Lectura}} () \mbox{\hyperlink{structNodo}{override}}
+\begin{DoxyCompactList}\small\item\em Implementación del procesamiento para \doxylink{classSensorPresion}{Sensor\+Presion}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structNodo}{void}} \mbox{\hyperlink{classSensorPresion_ad5181690dfb24946217e882606f04428}{imprimir\+Info}} () \mbox{\hyperlink{structNodo}{const}} \mbox{\hyperlink{structNodo}{override}}
+\begin{DoxyCompactList}\small\item\em Implementación de la impresión de info para \doxylink{classSensorPresion}{Sensor\+Presion}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structNodo}{void}} \mbox{\hyperlink{classSensorPresion_a2314c314508d9b7cda9c977020cdf392}{registrar\+Nueva\+Lectura}} (\mbox{\hyperlink{classSerial}{Serial}} \&\mbox{\hyperlink{structNodo}{port}}) \mbox{\hyperlink{structNodo}{override}}
+\begin{DoxyCompactList}\small\item\em Implementación del registro para \doxylink{classSensorPresion}{Sensor\+Presion}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classSensorBase}{Sensor\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSensorBase_aa03697680b21dbf3ca5ab797d50c6126}{Sensor\+Base}} (\mbox{\hyperlink{structNodo}{const}} \mbox{\hyperlink{structNodo}{char}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structNodo}{n}})
+\begin{DoxyCompactList}\small\item\em Constructor de \doxylink{classSensorBase}{Sensor\+Base}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structNodo}{virtual}} \mbox{\hyperlink{classSensorBase_af38b2b0e047cb4f0304fc4c204c420fa}{\texorpdfstring{$\sim$}{\string~}\+Sensor\+Base}} ()
+\begin{DoxyCompactList}\small\item\em Destructor Virtual (Crítico para polimorfismo). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structNodo}{const}} \mbox{\hyperlink{structNodo}{char}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classSensorBase_ae96d193c623231a955756bceac482f9c}{get\+Nombre}} () \mbox{\hyperlink{structNodo}{const}}
+\begin{DoxyCompactList}\small\item\em Obtiene el nombre (ID) del sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classSensorBase}{Sensor\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structNodo}{char}} {\bfseries nombre} \mbox{[}50\mbox{]}
+\begin{DoxyCompactList}\small\item\em Identificador del sensor (ej. "{}\+T-\/001"{}, "{}\+P-\/105"{}). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase derivada que maneja lecturas de presión (int). 
+
+Contiene una \doxylink{classListaSensor}{Lista\+Sensor} interna para almacenar valores int. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classSensorPresion_aaeabc03aa7fa915d9c2718a7930e434e}\label{classSensorPresion_aaeabc03aa7fa915d9c2718a7930e434e} 
+\index{SensorPresion@{SensorPresion}!SensorPresion@{SensorPresion}}
+\index{SensorPresion@{SensorPresion}!SensorPresion@{SensorPresion}}
+\doxysubsubsection{\texorpdfstring{SensorPresion()}{SensorPresion()}}
+{\footnotesize\ttfamily Sensor\+Presion\+::\+Sensor\+Presion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structNodo}{const}} \mbox{\hyperlink{structNodo}{char}} \texorpdfstring{$\ast$}{*}}]{n }\end{DoxyParamCaption})}
+
+
+
+Constructor de \doxylink{classSensorPresion}{Sensor\+Presion}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & El nombre (ID) para este sensor. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classSensorPresion_aa82718b7990902c257ebcd0234e1ed46}\label{classSensorPresion_aa82718b7990902c257ebcd0234e1ed46} 
+\index{SensorPresion@{SensorPresion}!````~SensorPresion@{\texorpdfstring{$\sim$}{\string~}SensorPresion}}
+\index{````~SensorPresion@{\texorpdfstring{$\sim$}{\string~}SensorPresion}!SensorPresion@{SensorPresion}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}SensorPresion()}{\string~SensorPresion()}}
+{\footnotesize\ttfamily Sensor\+Presion\+::\texorpdfstring{$\sim$}{\string~}\+Sensor\+Presion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor de \doxylink{classSensorPresion}{Sensor\+Presion}. 
+
+Imprime un log y libera automáticamente su \textquotesingle{}historial\textquotesingle{} (\doxylink{classListaSensor}{Lista\+Sensor$<$int$>$}). 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classSensorPresion_ad5181690dfb24946217e882606f04428}\label{classSensorPresion_ad5181690dfb24946217e882606f04428} 
+\index{SensorPresion@{SensorPresion}!imprimirInfo@{imprimirInfo}}
+\index{imprimirInfo@{imprimirInfo}!SensorPresion@{SensorPresion}}
+\doxysubsubsection{\texorpdfstring{imprimirInfo()}{imprimirInfo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structNodo}{void}} Sensor\+Presion\+::imprimir\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implementación de la impresión de info para \doxylink{classSensorPresion}{Sensor\+Presion}. 
+
+
+
+Implements \mbox{\hyperlink{classSensorBase_a7cf3aeb12b330c500e2a5136fa020eec}{Sensor\+Base}}.
+
+\Hypertarget{classSensorPresion_aff696aceb5e619529f911311a35d3c76}\label{classSensorPresion_aff696aceb5e619529f911311a35d3c76} 
+\index{SensorPresion@{SensorPresion}!procesarLectura@{procesarLectura}}
+\index{procesarLectura@{procesarLectura}!SensorPresion@{SensorPresion}}
+\doxysubsubsection{\texorpdfstring{procesarLectura()}{procesarLectura()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structNodo}{void}} Sensor\+Presion\+::procesar\+Lectura (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implementación del procesamiento para \doxylink{classSensorPresion}{Sensor\+Presion}. 
+
+Calcula el promedio de todas sus lecturas. 
+
+Implements \mbox{\hyperlink{classSensorBase_a7fbc0a5b444f7d16cd60ba873b8ec8e4}{Sensor\+Base}}.
+
+\Hypertarget{classSensorPresion_a2314c314508d9b7cda9c977020cdf392}\label{classSensorPresion_a2314c314508d9b7cda9c977020cdf392} 
+\index{SensorPresion@{SensorPresion}!registrarNuevaLectura@{registrarNuevaLectura}}
+\index{registrarNuevaLectura@{registrarNuevaLectura}!SensorPresion@{SensorPresion}}
+\doxysubsubsection{\texorpdfstring{registrarNuevaLectura()}{registrarNuevaLectura()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structNodo}{void}} Sensor\+Presion\+::registrar\+Nueva\+Lectura (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSerial}{Serial}} \&}]{port }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implementación del registro para \doxylink{classSensorPresion}{Sensor\+Presion}. 
+
+Espera activamente una línea del puerto serial que comience con "{}\+P\+:"{}. 
+\begin{DoxyParams}{Parameters}
+{\em port} & Referencia al objeto \doxylink{classSerial}{Serial}. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classSensorBase_a38d4987aafc115157c1013a675e80854}{Sensor\+Base}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Sensor_8h}{Sensor.\+h}}\item 
+\mbox{\hyperlink{Sensor_8cpp}{Sensor.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,29 @@
+\doxysection{Sistema.\+h}
+\hypertarget{Sistema_8h_source}{}\label{Sistema_8h_source}\mbox{\hyperlink{Sistema_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ SISTEMA\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ SISTEMA\_H}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Sensor_8h}{Sensor.h}}"{}}\ }
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ Sensor.h\ ya\ incluye\ ListaSensor.h}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classSistema}{Sistema}}\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{structNodo}{ListaSensor<SensorBase*>}}\ listaGestion;}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{classSistema_a815b07845ef6b03247b239333fe75e28}{Sistema}}();}
+\DoxyCodeLine{00031\ \ \ \ \ }
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{classSistema_aafc86e0f2c3d734fb4c0985f70c27a1a}{\string~Sistema}}();}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSistema_a195dee450d8ae2a9dd42fbb15b30b323}{agregarSensor}}(\mbox{\hyperlink{classSensorBase}{SensorBase}}*\ \mbox{\hyperlink{structNodo}{sensor}});}
+\DoxyCodeLine{00047\ \ \ \ \ }
+\DoxyCodeLine{00053\ \ \ \ \ \mbox{\hyperlink{classSensorBase}{SensorBase}}*\ \mbox{\hyperlink{classSistema_a8da5f1f26e221828613d03283b64b90d}{buscarSensor}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ nombre);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSistema_aa2570fad50e8160b51ed093a668c8491}{procesarTodos}}();}
+\DoxyCodeLine{00062\ \};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

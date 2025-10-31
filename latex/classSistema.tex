@@ -1,0 +1,95 @@
+\doxysection{Sistema Class Reference}
+\hypertarget{classSistema}{}\label{classSistema}\index{Sistema@{Sistema}}
+
+
+Clase principal que gestiona la lista polimórfica de sensores.  
+
+
+
+
+{\ttfamily \#include $<$Sistema.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classSistema_a815b07845ef6b03247b239333fe75e28}\label{classSistema_a815b07845ef6b03247b239333fe75e28} 
+{\bfseries Sistema} ()
+\begin{DoxyCompactList}\small\item\em Constructor de \doxylink{classSistema}{Sistema}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSistema_aafc86e0f2c3d734fb4c0985f70c27a1a}{\texorpdfstring{$\sim$}{\string~}\+Sistema}} ()
+\begin{DoxyCompactList}\small\item\em Destructor de \doxylink{classSistema}{Sistema}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structNodo}{void}} \mbox{\hyperlink{classSistema_a195dee450d8ae2a9dd42fbb15b30b323}{agregar\+Sensor}} (\mbox{\hyperlink{classSensorBase}{Sensor\+Base}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structNodo}{sensor}})
+\begin{DoxyCompactList}\small\item\em Agrega un nuevo sensor (ya creado) a la lista de gestión. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSensorBase}{Sensor\+Base}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classSistema_a8da5f1f26e221828613d03283b64b90d}{buscar\+Sensor}} (\mbox{\hyperlink{structNodo}{const}} \mbox{\hyperlink{structNodo}{char}} \texorpdfstring{$\ast$}{*}nombre)
+\begin{DoxyCompactList}\small\item\em Busca un sensor en la lista de gestión por su nombre (ID). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structNodo}{void}} \mbox{\hyperlink{classSistema_aa2570fad50e8160b51ed093a668c8491}{procesar\+Todos}} ()
+\begin{DoxyCompactList}\small\item\em Ejecuta el procesamiento polimórfico. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase principal que gestiona la lista polimórfica de sensores. 
+
+Contiene la lista de gestión principal que almacena punteros Sensor\+Base\texorpdfstring{$\ast$}{*} y orquesta las operaciones principales. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classSistema_aafc86e0f2c3d734fb4c0985f70c27a1a}\label{classSistema_aafc86e0f2c3d734fb4c0985f70c27a1a} 
+\index{Sistema@{Sistema}!````~Sistema@{\texorpdfstring{$\sim$}{\string~}Sistema}}
+\index{````~Sistema@{\texorpdfstring{$\sim$}{\string~}Sistema}!Sistema@{Sistema}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Sistema()}{\string~Sistema()}}
+{\footnotesize\ttfamily Sistema\+::\texorpdfstring{$\sim$}{\string~}\+Sistema (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor de \doxylink{classSistema}{Sistema}. 
+
+Inicia la "{}\+Liberación de Memoria en Cascada"{}. Itera sobre la lista\+Gestion y aplica {\ttfamily delete} a cada puntero {\ttfamily Sensor\+Base\texorpdfstring{$\ast$}{*}}. Gracias al destructor virtual de \doxylink{classSensorBase}{Sensor\+Base}, esto llama al destructor correcto (ej. \texorpdfstring{$\sim$}{\string~}\+Sensor\+Temperatura), que a su vez libera su lista interna. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classSistema_a195dee450d8ae2a9dd42fbb15b30b323}\label{classSistema_a195dee450d8ae2a9dd42fbb15b30b323} 
+\index{Sistema@{Sistema}!agregarSensor@{agregarSensor}}
+\index{agregarSensor@{agregarSensor}!Sistema@{Sistema}}
+\doxysubsubsection{\texorpdfstring{agregarSensor()}{agregarSensor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structNodo}{void}} Sistema\+::agregar\+Sensor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSensorBase}{Sensor\+Base}} \texorpdfstring{$\ast$}{*}}]{sensor }\end{DoxyParamCaption})}
+
+
+
+Agrega un nuevo sensor (ya creado) a la lista de gestión. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sensor} & Un puntero de tipo Sensor\+Base\texorpdfstring{$\ast$}{*} al objeto a agregar. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classSistema_a8da5f1f26e221828613d03283b64b90d}\label{classSistema_a8da5f1f26e221828613d03283b64b90d} 
+\index{Sistema@{Sistema}!buscarSensor@{buscarSensor}}
+\index{buscarSensor@{buscarSensor}!Sistema@{Sistema}}
+\doxysubsubsection{\texorpdfstring{buscarSensor()}{buscarSensor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSensorBase}{Sensor\+Base}} \texorpdfstring{$\ast$}{*} Sistema\+::buscar\+Sensor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structNodo}{const}} \mbox{\hyperlink{structNodo}{char}} \texorpdfstring{$\ast$}{*}}]{nombre }\end{DoxyParamCaption})}
+
+
+
+Busca un sensor en la lista de gestión por su nombre (ID). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nombre} & El C-\/string del ID del sensor a buscar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un puntero Sensor\+Base\texorpdfstring{$\ast$}{*} al sensor si se encuentra, o {\ttfamily nullptr} si no. 
+\end{DoxyReturn}
+\Hypertarget{classSistema_aa2570fad50e8160b51ed093a668c8491}\label{classSistema_aa2570fad50e8160b51ed093a668c8491} 
+\index{Sistema@{Sistema}!procesarTodos@{procesarTodos}}
+\index{procesarTodos@{procesarTodos}!Sistema@{Sistema}}
+\doxysubsubsection{\texorpdfstring{procesarTodos()}{procesarTodos()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structNodo}{void}} Sistema\+::procesar\+Todos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Ejecuta el procesamiento polimórfico. 
+
+Itera sobre la lista\+Gestion y llama al método {\ttfamily procesar\+Lectura()} de cada sensor. El polimorfismo asegura que se ejecute la implementación correcta (Temp o Presion). 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Sistema_8h}{Sistema.\+h}}\item 
+\mbox{\hyperlink{Sistema_8cpp}{Sistema.\+cpp}}\end{DoxyCompactItemize}

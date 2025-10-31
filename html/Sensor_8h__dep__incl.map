@@ -1,0 +1,11 @@
+<map id="Sensor.h" name="Sensor.h">
+<area shape="rect" id="Node000001" title="Define la jerarquía de clases polimórficas para los Sensores." alt="" coords="69,5,146,31"/>
+<area shape="rect" id="Node000002" href="$Sensor_8cpp.html" title="Implementación de los métodos de SensorBase, SensorTemperatura y SensorPresion." alt="" coords="5,79,97,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="92,43,62,80,58,77,87,40"/>
+<area shape="rect" id="Node000003" href="$Sistema_8h.html" title="Define la clase Sistema, gestora principal del programa." alt="" coords="121,79,208,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="127,40,157,77,153,80,123,43"/>
+<area shape="rect" id="Node000004" href="$Sistema_8cpp.html" title="Implementación de los métodos de la clase Sistema." alt="" coords="55,152,157,177"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="148,116,118,154,113,150,144,113"/>
+<area shape="rect" id="Node000005" href="$main_8cpp.html" title="Punto de entrada principal del programa y menú interactivo." alt="" coords="182,152,265,177"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="185,113,216,150,212,154,181,116"/>
+</map>

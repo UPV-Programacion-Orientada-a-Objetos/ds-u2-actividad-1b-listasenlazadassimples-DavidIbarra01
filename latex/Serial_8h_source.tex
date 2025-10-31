@@ -1,0 +1,32 @@
+\doxysection{Serial.\+h}
+\hypertarget{Serial_8h_source}{}\label{Serial_8h_source}\mbox{\hyperlink{Serial_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ SERIAL\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ SERIAL\_H}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ Librerías\ del\ sistema\ POSIX\ para\ el\ puerto\ serial}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <fcntl.h>}\ \ \ \textcolor{comment}{//\ Contiene\ control\ de\ archivos\ (ej.\ O\_RDWR)}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <termios.h>}\ \textcolor{comment}{//\ Contiene\ control\ de\ terminal\ POSIX}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <unistd.h>}\ \ \textcolor{comment}{//\ Contiene\ llamadas\ al\ sistema\ (ej.\ read,\ write,\ close)}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classSerial}{Serial}}\ \{}
+\DoxyCodeLine{00020\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{int}\ fd;}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structNodo}{termios}}\ tty;}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{classSerial_a3667c3137f2df94716b5193f9fb736ab}{Serial}}();}
+\DoxyCodeLine{00032\ \ \ \ \ }
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{classSerial_a5b32c394c0ff923a4ef1c13cfb20a6ba}{\string~Serial}}();}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classSerial_a6d302a92b743f500cfb7e98d3e1f8633}{abrir}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{structNodo}{puerto}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structNodo}{baudrate}});}
+\DoxyCodeLine{00046\ \ \ \ \ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSerial_ae14e676b9c9248ab60a18c6676c6fc7d}{cerrar}}();}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classSerial_a5411110df86cc007aac0330b41761018}{leerLinea}}(\textcolor{keywordtype}{char}*\ \mbox{\hyperlink{structNodo}{buffer}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structNodo}{tamBuffer}});}
+\DoxyCodeLine{00061\ \};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
